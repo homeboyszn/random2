@@ -1,0 +1,33 @@
+name: Deploy a simple application 
+on: 
+    push:
+        branches:
+        - master
+jobs:
+    deploy_application_job:
+        runs-on: self-hosted
+        steps:
+        - name: "say hello"
+          run: |
+            echo "Hello everyone!"
+        - name: "List directory 1"
+          run: |
+            ls -la
+
+        - name: Checkout from .github directory
+          uses: actions/checkout@v4
+
+        - name: Create a new directory
+          run: |
+            mkdir testdir
+          
+        - name: "List directory 2"
+          run: |
+            ls -la
+
+        
+
+  
+
+
+        
