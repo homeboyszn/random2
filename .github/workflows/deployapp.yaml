@@ -2,7 +2,7 @@ name: Deploy a simple application
 on: 
     push:
         branches:
-        - master
+        - main
 jobs:
     deploy_application_job:
         runs-on: self-hosted
